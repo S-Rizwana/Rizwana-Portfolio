@@ -1,0 +1,70 @@
+/* --- Skills Page Specific Styles --- */
+.skills-intro {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-category {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: center; /* This centers the content inside the card */
+}
+
+.skill-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background-color: #3f51b5; /* Matches the project card hover color */
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    color: #122C4F;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.skill-category:hover h3 {
+    color: #fff; /* Changes heading to white on hover */
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category li {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    background-color: #f7f9fc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-category:hover li {
+    background-color: #5c6bc0; /* A slightly lighter blue for contrast */
+    color: #fff; /* Changes list item text to white on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizwana | Portfolio</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+       <div class="logo"><span class="logo-border">S <span class="logo-name">R</span></span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="files/S Rizwana Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="hero-section">
+        <div class="intro-content">
+            <h2 class="greeting">Hi, I'm</h2>
+            <h1 class="main-heading">S Rizwana</h1>
+            <p class="tagline">Computer Science Graduate | Future Software Engineer</p>
+            <p class="description">I love solving problems with Java, Web, and innovative software solutions.</p>
+            <div class="button-container">
+                <a href="projects.html" class="btn primary">View My Projects</a>
+                <a href="files/S Rizwana Resume.pdf" download class="btn secondary">Download Resume</a>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

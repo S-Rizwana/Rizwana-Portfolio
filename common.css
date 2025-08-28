@@ -1,0 +1,235 @@
+/* General & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #122C4F;
+    padding: 1.2rem 3rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #122C4F;
+    padding: 1rem 2rem;
+    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+/* logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+    /* Remove any previous text-decoration here if it was under logo */
+}
+
+.logo-border { /* New class for the border effect */
+    display: inline-block; /* Essential for padding and border to work around text */
+     padding: 5px 10px;
+     /* Adjust padding as needed for the border size */
+    border: 2px solid white; /* White border */
+    border-radius: 100%; /* Makes the border rounded, adjust for more or less roundness */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logo-border:hover {
+    background-color:white ;/* Slight white background on hover */
+    border-color: #3f51b5; /* Changes border to blue on hover, matching your theme */
+}
+
+.logo-name{
+    color: #3f51b5;
+}
+.logo:hover{
+    color: #122C4F;
+}
+
+/* ... (rest of your common.css code remains the same) ... */
+/* nav bar */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #e3f2fd;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #3f51b5;
+}
+
+/* --- Content & Headings (common) --- */
+.content-page {
+    padding: 2rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #122C4F;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.page-heading::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #3f51b5;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #122C4F;
+    color: #fff;
+}
+
+.btn.secondary {
+    background-color: #fff;
+    color: #3f51b5;
+    border: 2px solid #3f51b5;
+}
+
+.btn.primary:hover {
+    background-color: #1a237e;
+    transform: translateY(-3px);
+}
+
+.btn.secondary:hover {
+    background-color: #3f51b5;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* --- Back Button --- */
+.back-btn {
+    display: none; /* Hidden on desktop */
+    margin: 1rem 2rem;
+    width: 40px;
+    height: 40px;
+    background: #3f51b5;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #1a237e;
+}
+
+/* --- Hamburger Menu & Mobile Styles --- */
+.menu-toggle {
+    display: none; /* Hidden on large screens */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer;
+    width: 40px; 
+    height: 40px; 
+    gap: 5px;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #e3f2fd;
+    transition: all 0.3s;
+}
+
+.nav-links.active {
+    display: flex !important;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #122C4F;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 99;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .content-page {
+        padding: 2rem 1rem;
+    }
+
+    .page-heading {
+        font-size: 2rem;
+    }
+
+    .page-heading::after {
+        width: 60px;
+    }
+
+    .back-btn {
+        display: inline-block; /* Show on mobile */
+    }
+}

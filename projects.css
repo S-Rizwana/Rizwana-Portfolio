@@ -1,0 +1,68 @@
+/* --- Projects Cards --- */
+.project-intro {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.card-container {
+    display: flex; /* Use Flexbox for powerful alignment */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: center; /* Centers items horizontally, including the last one */
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 280px; /* Ensures card has a minimum size for wrapping */
+    max-width: 350px;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background-color: #3f51b5;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: #122C4F;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+}
+
+.project-card:hover h3,
+.project-card:hover p {
+    color: #fff;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+/* --- Button Specifics for Projects Page --- */
+.btn.secondary:hover {
+    border: 2px solid #fff;
+}

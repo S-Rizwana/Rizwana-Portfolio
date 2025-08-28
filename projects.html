@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rizwana</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="backbutton.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+         <div class="logo"><span class="logo-border">S <span class="logo-name">R</span></span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="files/S Rizwana Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="index.html" class="back-btn">&#8592;</a>
+
+    <main class="content-page">
+        <section class="projects-section">
+            <h1 class="page-heading">Projects</h1>
+            <p class="project-intro">Things I've been building 🚀 Exploring ideas, solving problems, and having fun with code — here’s what I’ve built so far.</p>
+            <div class="card-container">
+              <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Designed and built a clean, professional, and fully responsive portfolio from scratch to showcase my skills and projects using HTML and CSS.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn secondary">Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Library Management System</h3>
+                    <p>Designed a database-driven system in Java & SQL to manage book inventory, borrowing, and user records efficiently.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn secondary">Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>E-commerce Web Application</h3>
+                    <p>Built a responsive shopping platform with product listings, cart, and order management features using HTML, CSS, and JS.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn secondary">Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Fake Job Post Detection using ML</h3>
+                    <p>Developed a machine learning model to classify fake job postings using NLP techniques, improving detection accuracy.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn secondary">Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

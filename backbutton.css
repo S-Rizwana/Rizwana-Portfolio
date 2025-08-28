@@ -1,0 +1,15 @@
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin: 1rem 2rem;
+    font-size: 2.5rem;
+    color: #3f51b5;
+    text-decoration: none;
+    transition: color 0.3s;
+    background: transparent; /* Ensures no background color in the normal state */
+}
+
+.back-btn:hover {
+    color: #1a237e; /* A subtle color change on hover */
+    background: transparent; /* Ensures no background color on hover */
+}

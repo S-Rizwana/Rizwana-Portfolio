@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Rizwana</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="backbutton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+         <div class="logo"><span class="logo-border">S <span class="logo-name">R</span></span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="files/S Rizwana Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html" class="back-btn">&#8592;</a>
+
+    <main class="content-page">
+        <h1 class="page-heading">About Me</h1>
+        <section class="about-intro-section">
+            <p>I'm a passionate Computer Science graduate with a strong foundation in Java, web development, and software design. My journey began with a curiosity for how technology solves real-world problems, and it has evolved into a dedication to building innovative and user-friendly software solutions.</p>
+            <p>My expertise lies in developing robust backend systems and dynamic front-end interfaces. I thrive in collaborative environments where I can apply my problem-solving skills to tackle new challenges and continuously learn. I am committed to writing clean, efficient, and maintainable code that delivers impactful results.</p>
+        </section>
+
+        <section class="about-tabs">
+            <div class="tab-headers">
+                <button class="tab-button active" data-tab="education">Education</button>
+                <button class="tab-button" data-tab="certifications">Certifications</button>
+                <button class="tab-button" data-tab="achievements">Achievements</button>
+            </div>
+
+            <div class="tab-content-container">
+                <div id="education" class="tab-pane active">
+                    <div class="card-item">
+                        <h3>SRI VENKATESA PERUMAL COLLEGE OF ENGINEERING AND TECHNOLOGY</h3>
+                        <p>Computer Science Engineering</p>
+                        <p class="date">2025</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>SRI SURYA JUNIOR COLLEGE</h3>
+                        <p>Intermediate (MPC)</p>
+                        <p class="date">2021 | Percentage: 97.5%</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>SGNZP GIRLS HIGH SCHOOL</h3>
+                        <p>SSC</p>
+                        <p class="date">2019 | Percentage: 97%</p>
+                    </div>
+                </div>
+
+                <div id="certifications" class="tab-pane">
+                    <div class="card-item">
+                        <h3>Full Stack Java Development</h3>
+                        <p>QSpiders, Tirupati (2025)</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>Exploratory Data Analysis</h3>
+                        <p>Infosys Springboard (2024)</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>C Programming</h3>
+                        <p>New Leaf (2024)</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>Programming in Java</h3>
+                        <p>NPTEL (2023)</p>
+                    </div>
+                </div>
+
+                <div id="achievements" class="tab-pane">
+                    <div class="card-item">
+                        <h3>NPTEL Topper</h3>
+                        <p>Ranked in the Top 5% for excellence in Programming Concepts</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>Runner-up in Paper Bridge Activity</h3>
+                        <p>Showcasing teamwork and structural design skills</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                
+                button.classList.add('active');
+                
+                const targetTabId = button.dataset.tab;
+                document.getElementById(targetTabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
